@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gautham S - Portfolio</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- head -->
+         <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Gautham S</p>
+                <span>.</span>
+            </div>
+
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">About_Me</a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <!-- <li class="nav_list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li> -->
+
+                    <li class="nav_list">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+
+                    <li class="nav_list">
+                        <a href="SignUp/index.html" class="nav-link">Sign_Up</a>
+                        <div class="circle"></div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="nav-button">
+                <!-- <button class="btn">Download CV
+                    <i class="uil uil-file-alt"></i>
+                </button> -->
+
+                <div class="nav-button">
+                    <button class="btn" id="theme-toggle">Light Mode</button>
+                </div>
+                
+            </div>
+
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+
+         </nav>
+
+
+
+         <!-- main -->
+          <main class="wrapper">
+
+            <!-- featured -->
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+
+                    <div class="featured-text-card">
+                        <span>Gautham</span>
+                    </div>
+
+                    <div class="featured-name">
+                        <p>Hi, I'm <span class="featured-text-card">Gautham</span> <br>#<span class="typedText"></span></p>
+                    </div>
+
+                    <div class="featured-text-info">
+                        <p>I am an aspiring Software Engineer focused on web development and programming, currently pursuing a B.Tech in Computer Science Engineering. I look forward to contributing to a forward-thinking team.</p>
+                    </div>
+
+                    <div class="featured-text-btn">
+                        <button class="btn blue-btn" onclick="scrollToContact()">Hire Me</button>
+                        <button class="btn">Resume</button>
+                    </div>
+
+                    <div class="social_icons">
+                        <div class="icon"><i class="uil uil-linkedin"></i></div>
+                        <div class="icon"><i class="uil uil-github"></i></div>
+                    </div>
+
+
+                </div>
+
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="assets/images/avatar1.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="scroll-icon-box">
+                    <a href="#about" class="scroll-btn">
+                        <i class="uil uil-mouse-alt"></i>
+                        <p>Scroll Down</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- about -->
+            <section class="section" id="about">
+
+                <div class="top-header">
+                    <h1>About Me</h1>                
+
+                    <div class="about-img">
+                        <img src="assets/images/img5.jpg">
+                        <span class="circle-spin"></span>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+
+                            <h3>Introduction</h3>
+
+                            <p>I'm Gautham S, <br> An aspiring software engineer with expertise in computer programming, web development, and problem-solving. <br>I am passionate about learning new technologies and building impactful software solutions.</p>
+
+                            <div class="about-btn">
+                                <button class="btn">
+                                    Download CV<i class="uil uil-import"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Programming Languages</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>Python</span>
+                                <span>Java</span>
+                                <span>C</span>
+                                <span>C#</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Web Development</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>Bootstrap</span>
+                                <span>Flask</span>
+                                <span>Django</span>
+                                <span>React</span>
+                            </div>
+                        </div>
+
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Database</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>MySQL</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- project box
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="project-container">
+
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Completed</h3>
+                        <label>2 main projects</label>
+                    </div>
+
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Completed</h3>
+                        <label>2 main projects</label>
+                    </div>
+
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Completed</h3>
+                        <label>2 main projects</label>
+                    </div>
+
+                </div>
+            </section> -->
+
+
+            <section class="section" id="gallery">
+
+                
+                <div class="top-header">
+                    <h1>Gallery</h1>
+                </div>
+
+
+                <div class="slider">
+                    <div class="list">
+                        <div class="item">
+                            <img src="assets/images/img5.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/img4.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/img3.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/img2.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="assets/images/avatar1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button id="prev"></button>
+                        <button id="next">></button>
+                    </div>
+                    <ul class="dots">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+
+            
+            <!-- contact box -->
+             <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Get in touch</h1>
+                </div>
+
+                <div class="row">
+
+                    <div class="col">
+                        <div class="contact-info">
+                            <span>Reach out and let’s collaborate!</span> <br>
+
+                            <h2>Find me <i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i>Email: gat@gmail</p>
+                            <p><i class="uil uil-phone"></i>Mobile: +91 996*******</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-control">
+
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" placeholder="Name">
+                                <input type="text" class="input-field" placeholder="Email">
+                            </div>
+
+                            <div class="text-area">
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+
+                            <div class="form-button">
+                                <button class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15723.39224075249!2d76.26730421941863!3d9.98163550260456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d0a50597eb1%3A0x5a95ff09e21532d7!2sErnakulam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1695477889543!5m2!1sen!2sin"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+             </section>
+
+          </main>
+
+
+          <!-- footer -->
+          <footer>
+
+            <div class="top-footer">
+                <p>Gautham S .</p>
+            </div>
+
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#about">About</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-social-icons">
+                <div class="icon"><i class="uil uil-linkedin"></i></div>
+                <div class="icon"><i class="uil uil-github"></i></div>
+            </div>
+
+            <div class="bottom-footer">
+                <p>Copyrigth &copy; <a href="#home" style="text-decoration: none; color: aliceblue;">Gautham S</a> - All rights reserved</p>
+            </div>
+          </footer>
+
+    </div>
+
+
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</body>
+</html>
