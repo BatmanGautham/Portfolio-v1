@@ -1,81 +1,139 @@
+// nav bar func
 
-const inputs = document.querySelectorAll(".input-field");
-const toggle_btn = document.querySelectorAll(".toggle");
-const main = document.querySelector("main");
-const bullets = document.querySelectorAll(".bullets span");
-const images = document.querySelectorAll(".image");
-const carousel = document.querySelector(".carousel");
+function myMenuFunction(){
+    var menuBtn = document.getElementById("myNavMenu");
 
-inputs.forEach(inp => {
-    inp.addEventListener("focus", () => {
-        inp.classList.add("active");
-    });
-
-    inp.addEventListener("blur", () => {
-        if (inp.value != "") return;
-        inp.classList.remove("active");
-    });
-});
-
-toggle_btn.forEach(btn => {
-    btn.addEventListener("click", () => {
-        main.classList.toggle("sign-up-mode");
-    });
-});
-
-function moveSlider() {
-    let index = this.dataset.value;
-    let currentImage = document.querySelector(`.img-${index}`);
-    images.forEach((img) => img.classList.remove("show"));
-    currentImage.classList.add("show");
-  
-    const textSlider = document.querySelector(".text-group");
-    textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
-  
-    bullets.forEach((bull) => bull.classList.remove("active"));
-    this.classList.add("active");
+    if(menuBtn.className === "nav-menu")
+    {
+        menuBtn.className += " responsive";
+    }
+    else
+    {
+        menuBtn.className = "nav-menu"
+    }
 }
 
-bullets.forEach((bullet) => {
-    bullet.addEventListener("click", moveSlider);
-});
 
-let currentIndex = 0;
-function showImage(index) {
-    images.forEach(img => img.classList.remove("show"));
-    bullets.forEach(bull => bull.classList.remove("active"));
-  
-    images[index].classList.add("show");
-    bullets[index].classList.add("active");
-    const textSlider = document.querySelector(".text-group");
-    textSlider.style.transform = `translateY(${-(index) * 2.2}rem)`;
-}
 
-function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-}
 
-let slideshowInterval = setInterval(nextImage, 8000);
 
-bullets.forEach((bullet, index) => {
-    bullet.addEventListener("click", () => {
-        currentIndex = index;
-        clearInterval(slideshowInterval);
-        showImage(currentIndex);
-        slideshowInterval = setInterval(nextImage, 8000);
-    });
+
+
+
+
+
+// JavaScript for Light Mode / Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    if (document.body.classList.contains('light-mode')) {
+        themeToggle.textContent = 'Dark Mode';
+    } else {
+        themeToggle.textContent = 'Light Mode';
+    }
 });
 
 
 
 
-// Color change 
-let colorIndex = 0;
-const colors = ["#082d2e","#f9cb9c","#dc9d1e","#1c221f"]; 
 
-setInterval(() => {
-    carousel.style.backgroundColor = colors[colorIndex];
-    colorIndex = (colorIndex + 1) % colors.length;
-}, 10000);
+
+
+
+
+
+
+
+/* shodow on nav while scroll */
+window.onscroll = function() {headerShadow()};
+
+function headerShadow(){
+    const navHeader = document.getElementById("header");
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50)
+    {
+        navHeader.style.boxShadow = "0 1px 6px red";
+        navHeader.style.height = "70px";
+        navHeader.style.boxShadow = "70px";
+    }
+    else
+    {
+        navHeader.style.boxShadow = "none";
+        navHeader.style.height = "90px";
+        navHeader.style.boxShadow = "90px";
+
+    }
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// change active link
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.scrollY;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight,
+              sectionTop = current.offsetTop - 50,
+              sectionId = current.getAttribute('id');
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
+        } else {
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
+        }
+    })
+}
+
+// Fixing the event listener
+window.addEventListener('scroll', scrollActive);
+
+
+
+
+
+var a = document.getElementById("loginBtn");
+var b = document.getElementById("registerBtn");
+var x = document.getElementById("login");
+var y = document.getElementById("register");
+
+
+function login() {
+    x.style.left = "4px";
+    y.style.right = "-520px";
+    a.className += " white-btn";
+    b.className = "btn";
+    x.style.opacity = 1;
+    y.style.opacity = 0;
+
+
+}
+
+function register() {
+    x.style.left = "-510px";
+    y.style.right = "5px";
+    a.className = "btn";
+    b.className += " white-btn";
+    x.style.opacity = 0;
+    y.style.opacity = 1;
+
+
+}
+
 
