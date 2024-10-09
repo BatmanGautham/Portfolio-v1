@@ -718,7 +718,9 @@ footer{
 }
 
 
-
+.light-mode .date-box{
+    color: #074748;
+}
 
 
 .light-mode .top-header span{
