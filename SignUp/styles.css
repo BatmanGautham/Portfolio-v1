@@ -2,16 +2,16 @@
 
 :root{
     --body-color:#0d4546;
-    --color-white: #d1e8e2; /* Light text color (soft white-blue) */
+    --color-white: #d1e8e2; 
 
-    --text-color-second: white; /* Lighter accent color for secondary text (peach tone) */
-    --text-color-third: #d9b08c; /* Warm accent color for tertiary text (soft brownish-yellow) */
+    --text-color-second: white; 
+    --text-color-third: #d9b08c; 
 
-    --first-color: #1c221f; /* Primary accent color (deep teal) */
-    --second-color: #d9b08c; /* Another accent color for contrast (light beige-brown) */
-    --third-color: #df7919; /* Accent color for highlights (peach tone) */
+    --first-color: #1c221f; 
+    --second-color: #d9b08c; 
+    --third-color: #df7919; 
 
-    --first-shadow-color: #d1e8e2; /* Subtle highlight or shadow (light blue) */
+    --first-shadow-color: #d1e8e2;
 }
 
 
@@ -209,7 +209,7 @@ nav{
 
 
 
-/* Phone number input box */
+
 .input-box {
     margin-bottom: 15px;
 }
@@ -222,6 +222,23 @@ nav{
     left: 17px;
     color: #fff;
 }
+
+
+
+
+.date-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 18px;
+    color: #fff;
+
+    padding-bottom: 5px;
+}
+
+
+
 
 .gender-box {
     display: flex;
@@ -250,16 +267,31 @@ nav{
 }
 
 .input-box input[type="text"],
-.input-box input[type="date"],
+/* .input-box input[type="date"], */
 .input-box textarea {
+    /* margin-left: 5px;
+    padding-right: 15px; */
     font-size: 15px;
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     height: 50px;
-    width: 100%;
+    width: 98%;
     padding: 0 10px 0 45px;
     border: none;
     border-radius: 30px;
+    outline: none;
+    transition: .2s ease;
+}
+
+.input-box input[type="date"]{
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    height: 50px;
+    width: 35%;
+    padding: 0 10px 0 45px;
+    border: none;
+    border-radius: 8px 30px 30px 8px;
     outline: none;
     transition: .2s ease;
 }
@@ -277,8 +309,8 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensure it fills the viewport height */
-    padding: 0 20px; /* Add padding for smaller screens */
+    min-height: 100vh; 
+    padding: 0 20px; 
 }
 
 
@@ -328,9 +360,9 @@ h3{
     flex-direction: column;
 
     width: 100%;
-    max-width: 700px; /* Limit the form width */
+    max-width: 700px; 
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.026); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.026);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
@@ -364,16 +396,15 @@ h3{
 }
 
 .register-container {
-    margin-top: 90px; /* Add this to push it below the navbar */
-
+    margin-top: 90px; 
     position: absolute;
     right: -520px;
     width: 500px;
     display: flex;
     flex-direction: column;
     transition: .5s ease-in-out;
-    height: auto; /* Allows the height to adjust automatically */
-    padding-bottom: 20px; /* Optional: Adds space at the bottom */
+    height: auto; 
+    padding-bottom: 20px; 
 
 
 }
@@ -482,8 +513,19 @@ header{
 
 
 
+
+
+
+
+.input-field option {
+    background-color: black; 
+    color: white;
+}
+
+
+
 footer{
-    margin-top: 90px; /* Add this to push it below the navbar */
+    margin-top: 90px; 
 
     display: flex;
     justify-content: center;
@@ -648,31 +690,31 @@ footer{
 }
 
 .light-mode .btn {
-    background-color: #457c80; /* Softer teal button color */
-    color: #ffffff; /* White text */
-    border: 2px solid #116466; /* Border to match the original styling */
+    background-color: #457c80; 
+    color: #ffffff; 
+    border: 2px solid #116466; 
 }
 
 .light-mode .btn:hover {
-    background-color: #04191a; /* Darker hover effect */
+    background-color: #04191a; 
 }
 
 .light-mode .nav-logo p {
-    color: #0d4546; /* Original teal color for consistency */
+    color: #0d4546;
 }
 
 .light-mode .nav-link {
-    color: #000000; /* Softer black for links */
+    color: #000000; 
 }
 
 .light-mode .nav-link.active-link {
-    color: red; /* Highlight active link */
+    color: red; 
 }
 
 
 
 .light-mode .featured-name span {
-    color: #074748; /* Pop the highlighted text with teal */
+    color: #074748; 
 }
 
 
@@ -699,7 +741,7 @@ footer{
 
 
 .light-mode .footer-social-icons .icon i {
-    color: #116466; /* Teal for social icons */
+    color: #116466; 
 }
 
 .light-mode footer{
@@ -707,18 +749,17 @@ footer{
 }
 
 .light-mode .footer-menu a {
-    color: #333333; /* Lighter footer link color */
+    color: #333333; 
 }
 
 .light-mode .footer-menu a:hover {
-    color: #116466; /* Hover effect for footer links */
+    color: #116466;
 }
 
 .light-mode .footer-menu a:active {
-    color: #ffcb9a; /* Subtle orange active effect */
+    color: #ffcb9a; 
 }
 
-/* Light mode scroll down icon */
 .light-mode .scroll-icon-box p {
     color: #116466;
 }
